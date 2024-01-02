@@ -8,7 +8,7 @@ import java.sql.*;
 import java.util.List;
 
 public class ClientDataDaoPostgreSQL {
-    final static Logger log = Logger.getLogger(AcccountDaoPostgreSQL.class);
+    final static Logger log = Logger.getLogger(ClientDataDaoPostgreSQL.class);
     private final static String DB_JDBC_DRIVER = "org.postgresql.Driver";
     private final static String DB_URL = "your database URL";
     private final static String DB_USER = "your database user";
