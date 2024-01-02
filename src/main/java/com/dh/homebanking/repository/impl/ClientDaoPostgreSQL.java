@@ -15,9 +15,9 @@ public class ClientDaoPostgreSQL {
 
     final static Logger log = Logger.getLogger(ClientDaoPostgreSQL.class);
     private final static String DB_JDBC_DRIVER = "org.postgresql.Driver";
-    private final static String DB_URL = "jdbc:postgresql://195.35.16.20:5432/";
-    private final static String DB_USER = "database"; // Por alguna razon para conectarme al que levante en mi vps tuve que hacerlo
-    private final static String DB_PASSWORD = "database";
+    private final static String DB_URL = "your database URL";
+    private final static String DB_USER = "your database user";
+    private final static String DB_PASSWORD = "your database password";
      /*
     Primero hay que tener en cuenta que hay que conectarse al shell del docker y crear la base de datos 
 
