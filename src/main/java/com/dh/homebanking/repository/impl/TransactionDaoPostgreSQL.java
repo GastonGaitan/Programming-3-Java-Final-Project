@@ -9,27 +9,11 @@ import java.util.List;
 
 public class TransactionDaoPostgreSQL {
 
-    //root@srv451320:~# docker run --name mi_postgres -e POSTGRES_USER=database -e POSTGRES_PASSWORD=database -d -p 5432:5432 postgres
-    //c9c56377750c9fd8dab8262d0fcf7b211e67f71fc8f45b10d3c5f0c643369ddc
     final static Logger log = Logger.getLogger(ClientDaoPostgreSQL.class);
-    // Conexion a mi postgres, solo hace falta poner el puerto
-    // Comanda de creacion de mi docker en mi vps: docker run --name postgres -e POSTGRES_USER=database -e POSTGRES_PASSWORD=database -p 5432:5432 -d postgres
-    // Comando de acceso al contenedor: docker exec -it 05e96299df6c bash
-    // Comando de acceso a la base de datos del contenedor: root@05e96299df6c:/# psql -U database
-    /*
-    * Tener en cuenta esto:
-    root@gastongaitanvps:~# docker exec -it 05e96299df6c bash
-    root@05e96299df6c:/# psql -U database
-    psql (16.0 (Debian 16.0-1.pgdg120+1))
-    Type "help" for help.
-
-    database=#
-    * */
     private final static String DB_JDBC_DRIVER = "org.postgresql.Driver";
-    private final static String DB_URL = "jdbc:postgresql://195.35.16.20:5432/";
-    private final static String DB_USER = "database"; // Por alguna razon para conectarme al que levante en mi vps tuve que hacerlo
-    // con el user que use en mi comanda de creacion
-    private final static String DB_PASSWORD = "database";
+    private final static String DB_URL = "your database URL";
+    private final static String DB_USER = "your database user";
+    private final static String DB_PASSWORD = "your database password";
 
     public void guardar(Integer destinyAccountMoneyReceived, Integer originAccountMoneyLost, int originAccount, int destinyAccount) {
         log.debug("Generando una nueva transaccion");
